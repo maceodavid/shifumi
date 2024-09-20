@@ -12,12 +12,21 @@ for (const button of buttons) {
         const index = Math.floor(Math.random() * 3);
         const botChoice = choices[index];
 
-        if (userChoice === botChoice) return resultat.textContent = "Égalité";
+        let result;
 
-        if (userChoice === "Pierre" && botChoice === "Ciseaux" ||
-            userChoice === "Ciseaux" && botChoice === "Feuille" ||
-            userChoice === "Feuille" && botChoice === "Pierre") return resultat.textContent = "Gagné";
+        if (userChoice === botChoice) {
+            result = "Égalité";
+        } else if (userChoice === "Pierre" && botChoice === "Ciseaux" ||
+                   userChoice === "Ciseaux" && botChoice === "Feuille" ||
+                   userChoice === "Feuille" && botChoice === "Pierre") {
+            
+            result = "Gagné";
+        } else {
+            result = "Perdu";
+        }
 
-        resultat.textContent = "Perdu"
+        resultat.innerHTML = `Joueur : ${userChoice} <br>
+                              Robot : ${botChoice} <br>
+                              Résultat : ${result}`;
     });
 }

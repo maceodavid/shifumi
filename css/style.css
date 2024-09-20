@@ -1,0 +1,26 @@
+button {
+    color: white;
+    background-color: blue;
+    height: 50px;
+    width: 75px;
+    margin: 1vw;
+    border: none;
+}
+
+.box {
+    background-color: lightskyblue;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.resultat {
+    border: solid;
+    border-color: blue;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 75px;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    display: flex;
+}
